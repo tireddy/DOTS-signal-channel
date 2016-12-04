@@ -344,7 +344,8 @@ DOTS client                                               DOTS server
 
       <section anchor="YANG" title="DOTS Signal YANG Model">
         <section title="Mitigation Request Model structure">
-          <t><figure>
+          <t> This document defines the YANG module "ietf-dots-signal", which
+          has the following structure:<figure>
               <artwork><![CDATA[
 module: ietf-dots-signal
     +--rw mitigation-scope
@@ -365,7 +366,9 @@ module: ietf-dots-signal
 
         <section title="Mitigation Request Model ">
           <t><figure>
-              <artwork><![CDATA[module ietf-dots-signal {
+              <artwork><![CDATA[<CODE BEGINS> file "ietf-dots-signal@2016-11-28.yang"
+
+module ietf-dots-signal {
       namespace "urn:ietf:params:xml:ns:yang:ietf-dots-signal";
       prefix "alias";
       import ietf-inet-types {
@@ -441,12 +444,15 @@ module: ietf-dots-signal
                   description "lifetime";
               }
      }
-  }]]></artwork>
+  }
+
+<CODE ENDS>]]></artwork>
             </figure></t>
         </section>
 
         <section title="Session Configuration Model structure">
-          <t><figure>
+          <t> This document defines the YANG module "ietf-dots-signal-config",
+          which has the following structure:<figure>
               <artwork><![CDATA[
 module: ietf-dots-signal-config
     +--rw signal-config
@@ -460,7 +466,8 @@ module: ietf-dots-signal-config
 
         <section title="Session Configuration Model ">
           <t><figure>
-              <artwork><![CDATA[
+              <artwork><![CDATA[<CODE BEGINS> file "ietf-dots-signal-config@2016-11-28.yang"
+
 module ietf-dots-signal-config {
      namespace "urn:ietf:params:xml:ns:yang:ietf-dots-signal-config";
      prefix "alias";
@@ -503,7 +510,9 @@ module ietf-dots-signal-config {
                            retransmissions";
          }
       }
-}]]></artwork>
+}
+
+<CODE ENDS>]]></artwork>
             </figure></t>
         </section>
       </section>
