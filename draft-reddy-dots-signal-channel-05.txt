@@ -5,11 +5,11 @@
 DOTS                                                            T. Reddy
 Internet-Draft                                                     Cisco
 Intended status: Standards Track                            M. Boucadair
-Expires: June 6, 2017                                             Orange
+Expires: June 9, 2017                                             Orange
                                                                 P. Patil
                                                                    Cisco
                                                                  D. Wing
-                                                        December 3, 2016
+                                                        December 6, 2016
 
 
    Distributed Denial-of-Service Open Threat Signaling (DOTS) Signal
@@ -42,7 +42,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on June 6, 2017.
+   This Internet-Draft will expire on June 9, 2017.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Reddy, et al.             Expires June 6, 2017                  [Page 1]
+Reddy, et al.             Expires June 9, 2017                  [Page 1]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -84,32 +84,32 @@ Table of Contents
      5.3.  Mitigation Request  . . . . . . . . . . . . . . . . . . .  12
        5.3.1.  Convey DOTS Signals . . . . . . . . . . . . . . . . .  13
        5.3.2.  Withdraw a DOTS Signal  . . . . . . . . . . . . . . .  17
-       5.3.3.  Retrieving a DOTS Signal  . . . . . . . . . . . . . .  17
+       5.3.3.  Retrieving a DOTS Signal  . . . . . . . . . . . . . .  18
        5.3.4.  Efficacy Update from DOTS Client  . . . . . . . . . .  21
-     5.4.  DOTS Signal Channel Session Configuration . . . . . . . .  22
-       5.4.1.  Discover Acceptable Configuration Parameters  . . . .  22
-       5.4.2.  Convey DOTS Signal Channel Session Configuration  . .  23
-       5.4.3.  Delete DOTS Signal Channel Session Configuration  . .  25
-       5.4.4.  Retrieving DOTS Signal Channel Session Configuration   26
-     5.5.  Redirected Signaling  . . . . . . . . . . . . . . . . . .  26
+     5.4.  DOTS Signal Channel Session Configuration . . . . . . . .  23
+       5.4.1.  Discover Acceptable Configuration Parameters  . . . .  23
+       5.4.2.  Convey DOTS Signal Channel Session Configuration  . .  24
+       5.4.3.  Delete DOTS Signal Channel Session Configuration  . .  26
+       5.4.4.  Retrieving DOTS Signal Channel Session Configuration   27
+     5.5.  Redirected Signaling  . . . . . . . . . . . . . . . . . .  27
      5.6.  Heartbeat Mechanism . . . . . . . . . . . . . . . . . . .  28
-   6.  (D)TLS Protocol Profile and Performance considerations  . . .  28
-     6.1.  MTU and Fragmentation Issues  . . . . . . . . . . . . . .  29
-   7.  (D)TLS 1.3 considerations . . . . . . . . . . . . . . . . . .  29
+   6.  (D)TLS Protocol Profile and Performance considerations  . . .  29
+     6.1.  MTU and Fragmentation Issues  . . . . . . . . . . . . . .  30
+   7.  (D)TLS 1.3 considerations . . . . . . . . . . . . . . . . . .  30
    8.  Mutual Authentication of DOTS Agents & Authorization of DOTS
-       Clients . . . . . . . . . . . . . . . . . . . . . . . . . . .  30
-   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  32
-   10. Security Considerations . . . . . . . . . . . . . . . . . . .  32
-   11. Contributors  . . . . . . . . . . . . . . . . . . . . . . . .  32
-   12. Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  33
-   13. References  . . . . . . . . . . . . . . . . . . . . . . . . .  33
-     13.1.  Normative References . . . . . . . . . . . . . . . . . .  33
-     13.2.  Informative References . . . . . . . . . . . . . . . . .  34
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  36
+       Clients . . . . . . . . . . . . . . . . . . . . . . . . . . .  31
+   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  33
+   10. Security Considerations . . . . . . . . . . . . . . . . . . .  33
+   11. Contributors  . . . . . . . . . . . . . . . . . . . . . . . .  33
+   12. Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  34
+   13. References  . . . . . . . . . . . . . . . . . . . . . . . . .  34
+     13.1.  Normative References . . . . . . . . . . . . . . . . . .  34
+     13.2.  Informative References . . . . . . . . . . . . . . . . .  35
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  37
 
 
 
-Reddy, et al.             Expires June 6, 2017                  [Page 2]
+Reddy, et al.             Expires June 9, 2017                  [Page 2]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -165,7 +165,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                  [Page 3]
+Reddy, et al.             Expires June 9, 2017                  [Page 3]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -221,7 +221,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                  [Page 4]
+Reddy, et al.             Expires June 9, 2017                  [Page 4]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -277,7 +277,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                  [Page 5]
+Reddy, et al.             Expires June 9, 2017                  [Page 5]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -333,7 +333,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                  [Page 6]
+Reddy, et al.             Expires June 9, 2017                  [Page 6]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -389,7 +389,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                  [Page 7]
+Reddy, et al.             Expires June 9, 2017                  [Page 7]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -445,7 +445,7 @@ module ietf-dots-signal {
 
 
 
-Reddy, et al.             Expires June 6, 2017                  [Page 8]
+Reddy, et al.             Expires June 9, 2017                  [Page 8]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -501,7 +501,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                  [Page 9]
+Reddy, et al.             Expires June 9, 2017                  [Page 9]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -557,7 +557,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 10]
+Reddy, et al.             Expires June 9, 2017                 [Page 10]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -613,7 +613,7 @@ module ietf-dots-signal-config {
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 11]
+Reddy, et al.             Expires June 9, 2017                 [Page 11]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -669,7 +669,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 12]
+Reddy, et al.             Expires June 9, 2017                 [Page 12]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -693,25 +693,42 @@ Internet-Draft             DOTS Signal Channel             December 2016
      Content-Type: "application/cbor"
      {
        "mitigation-scope": {
-          "policy-id": "integer",
-          "target-ip": ["string"],
-          "target-port-range":  [
-                            { "lower-port": "integer",
-                              "upper-port": "integer"
-                            }
-                          ],
-          "target-protocol": ["string"],
-          "FQDN": ["string"],
-          "URI": ["string"],
-          "E.164": ["string"],
-          "alias": ["string"]
-          "lifetime": "integer"
+          "policy-id": integer,
+          "target-ip": [
+             "string"
+           ],
+          "target-port-range": [
+             {
+               "lower-port": integer,
+               "upper-port": integer
+             }
+           ],
+           "target-protocol": [
+             integer
+           ],
+           "FQDN": [
+             "string"
+           ],
+           "URI": [
+             "string"
+           ],
+           "E.164": [
+             "string"
+           ],
+          "lifetime": integer
         }
      }
 
                    Figure 5: POST to convey DOTS signals
 
    The header fields are described below.
+
+
+
+Reddy, et al.             Expires June 9, 2017                 [Page 13]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
 
    policy-id:  Identifier of the policy represented using an integer.
       This identifier MUST be unique for each policy bound to the DOTS
@@ -720,15 +737,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
       generated by the DOTS client.  This document does not make any
       assumption about how this identifier is generated.  This is a
       mandatory attribute.
-
-
-
-
-
-Reddy, et al.             Expires June 6, 2017                 [Page 13]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
 
    target-ip:  A list of IP addresses or prefixes under attack.  IP
       addresses and prefixes are separated by commas.  Prefixes are
@@ -769,6 +777,15 @@ Internet-Draft             DOTS Signal Channel             December 2016
       server MUST always indicate the actual lifetime in the response.
       This is an optional attribute in the request.
 
+
+
+
+
+Reddy, et al.             Expires June 9, 2017                 [Page 14]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
+
    In the POST request at least one of the attributes target-ip or
    target-port or target-protocol or FQDN or URI or E.164 or alias MUST
    be present.  The relative order of two mitigation requests is
@@ -776,15 +793,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
    mitigation request with higher numeric policy identifier value has
    higher precedence (and thus will match before) than the mitigation
    request with lower numeric policy identifier value.
-
-
-
-
-
-Reddy, et al.             Expires June 6, 2017                 [Page 14]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
 
    To avoid DOTS signal message fragmentation and the consequently
    decreased probability of message delivery, DOTS agents MUST ensure
@@ -826,27 +834,32 @@ Internet-Draft             DOTS Signal Channel             December 2016
      {
        "mitigation-scope": {
           "policy-id":123321333242,
-          "target-ip":[
-              "2002:db8:6401::1",
-              "2002:db8:6401::2"
-          ],
-          "target-port":[
-               { "lower-port": 80
-               },
-               { "lower-port": 443
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 15]
+Reddy, et al.             Expires June 9, 2017                 [Page 15]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
 
+          "target-ip":[
+              "2002:db8:6401::1",
+              "2002:db8:6401::2"
+          ],
+          "target-port-range":[
+               {
+                 "lower-port": 80
                },
-               { "lower-port": 8080
+               {
+                 "lower-port": 443
+               },
+               {
+                  "lower-port": 8080
                }
           ],
-          "target-protocol":[6]
+          "target-protocol": [
+             6
+           ]
        }
      }
 
@@ -877,6 +890,14 @@ Internet-Draft             DOTS Signal Channel             December 2016
                6a                          # text(10)
                   6c6f7765722d706f7274     # "lower-port"
                19 01bb                     # unsigned(443)
+
+
+
+Reddy, et al.             Expires June 9, 2017                 [Page 16]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
+
             a1                             # map(1)
                6a                          # text(10)
                   6c6f7765722d706f7274     # "lower-port"
@@ -889,14 +910,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
                       Figure 6: POST for DOTS signal
-
-
-
-
-Reddy, et al.             Expires June 6, 2017                 [Page 16]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
 
    The DOTS server indicates the result of processing the POST request
    using CoAP response codes.  CoAP 2.xx codes are success, CoAP 4.xx
@@ -925,7 +938,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
      Content-Format: "application/cbor"
      {
        "mitigation-scope": {
-        "policy-id": "integer"
+        "policy-id": integer
        }
      }
 
@@ -933,6 +946,14 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
    If the DOTS server does not find the policy number conveyed in the
    DELETE request in its policy state data, then it responds with a 4.04
+
+
+
+Reddy, et al.             Expires June 9, 2017                 [Page 17]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
+
    (Not Found) error response code.  The DOTS server successfully
    acknowledges a DOTS client's request to withdraw the DOTS signal
    using 2.02 (Deleted) response code, and ceases mitigation activity as
@@ -945,14 +966,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
    find the policy number conveyed in the GET request in its policy
    state data, then it responds with a 4.04 (Not Found) error response
    code.
-
-
-
-
-Reddy, et al.             Expires June 6, 2017                 [Page 17]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
 
    1) To retrieve all DOTS signals signaled by the DOTS client.
 
@@ -978,7 +991,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
      Content-Format: "application/cbor"
      {
        "mitigation-scope": {
-        "policy-id": "integer"
+        "policy-id": integer
        }
      }
 
@@ -992,20 +1005,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Reddy, et al.             Expires June 6, 2017                 [Page 18]
+Reddy, et al.             Expires June 9, 2017                 [Page 18]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -1013,20 +1013,18 @@ Internet-Draft             DOTS Signal Channel             December 2016
    {
      "mitigation-scope":[
        {
-         "policy-id":123321333242,
-         "target-protocol":[6],
-         "lifetime":3600,
-         "status":"mitigation in progress"
-       },
-       {
          "policy-id":123321333244,
-         "target-protocol":[17],
+         "target-protocol": [
+             17
+         ],
          "lifetime":1800,
          "status":"mitigation complete"
        },
        {
          "policy-id":123321333245,
-         "target-protocol":[6],
+         "target-protocol": [
+             6
+          ],
          "lifetime":1800,
          "status":"attack stopped"
        }
@@ -1058,16 +1056,16 @@ Internet-Draft             DOTS Signal Channel             December 2016
    conveys the observe option set to 0 in the GET request to receive
    unsolicited notifications of attack mitigation status from the DOTS
    server.  Unidirectional notifications within the bidirectional signal
+   channel allows unsolicited message delivery, enabling asynchronous
+   notifications between the agents.  A DOTS client that is no longer
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 19]
+Reddy, et al.             Expires June 9, 2017                 [Page 19]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
 
-   channel allows unsolicited message delivery, enabling asynchronous
-   notifications between the agents.  A DOTS client that is no longer
    interested in receiving notifications from the DOTS server can simply
    "forget" the observation.  When the DOTS server then sends the next
    notification, the DOTS client will not recognize the token in the
@@ -1114,15 +1112,16 @@ Internet-Draft             DOTS Signal Channel             December 2016
    server and not the fact that it has recognized, using its own means,
    that the attack has been mitigated.  This ensures that the DOTS
    client does not recall a mitigation request in a premature fashion
+   because it is possible that the DOTS client does not sense the DDOS
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 20]
+
+Reddy, et al.             Expires June 9, 2017                 [Page 20]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
 
-   because it is possible that the DOTS client does not sense the DDOS
    attack on its resources but the DOTS server could be actively
    mitigating the attack and the attack is not completely averted.
 
@@ -1137,6 +1136,48 @@ Internet-Draft             DOTS Signal Channel             December 2016
    conveyed in the PUT request in its policy state data, it responds
    with a 4.04 (Not Found) error response code.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reddy, et al.             Expires June 9, 2017                 [Page 21]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
+
       Header: PUT (Code=0.03)
       Uri-Host: "host"
       Uri-Path: ".well-known"
@@ -1146,19 +1187,29 @@ Internet-Draft             DOTS Signal Channel             December 2016
       Content-Format: "application/cbor"
       {
        "mitigation-scope": {
-          "policy-id": "integer",
-          "target-ip": ["string"],
-          "target-port-range":  [
-                            { "lower-port": "integer",
-                              "upper-port": "integer"
-                            }
-                          ],
-          "target-protocol": ["string"],
-          "FQDN": ["string"],
-          "URI": ["string"],
-          "E.164": ["string"],
-          "alias": ["string"]
-          "lifetime": "integer"
+          "policy-id": integer,
+          "target-ip": [
+             "string"
+           ],
+          "target-port-range": [
+             {
+               "lower-port": integer,
+               "upper-port": integer
+             }
+           ],
+           "target-protocol": [
+             integer
+           ],
+           "FQDN": [
+             "string"
+           ],
+           "URI": [
+             "string"
+           ],
+           "E.164": [
+             "string"
+           ],
+          "lifetime": integer,
           "attack-status": "string"
         }
        }
@@ -1171,15 +1222,17 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
    in-progress:  DOTS client determines that it is still under attack.
 
+   terminated:  Attack is successfully mitigated (e.g., attack traffic
+      is dropped).
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 21]
+
+
+
+Reddy, et al.             Expires June 9, 2017                 [Page 22]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
-
-   terminated:  Attack is successfully mitigated (e.g., attack traffic
-      is dropped).
 
    The DOTS server indicates the result of processing the PUT request
    using CoAP response codes.  The response code 2.04 (Changed) will be
@@ -1229,7 +1282,10 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 22]
+
+
+
+Reddy, et al.             Expires June 9, 2017                 [Page 23]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -1265,11 +1321,11 @@ Internet-Draft             DOTS Signal Channel             December 2016
      Content-Format: "application/cbor"
      {
       "signal-config": {
-        "policy-id": "integer",
-        "heartbeat-interval": "integer",
-        "max-retransmit": "integer",
-        "ack-timeout": "integer",
-        "ack-random-factor": "number"
+        "policy-id": integer,
+        "heartbeat-interval": integer,
+        "max-retransmit": integer,
+        "ack-timeout": integer,
+        "ack-random-factor": number
       }
      }
 
@@ -1285,7 +1341,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 23]
+Reddy, et al.             Expires June 9, 2017                 [Page 24]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -1327,7 +1383,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
      Uri-Path: "config"
      Content-Format: "application/cbor"
      {
-       "signal-config: {
+       "signal-config": {
         "policy-id": 1234534333242,
         "heartbeat-interval": 30,
         "max-retransmit": 7,
@@ -1341,7 +1397,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 24]
+Reddy, et al.             Expires June 9, 2017                 [Page 25]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -1386,7 +1442,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
      Content-Format: "application/cbor"
      {
        "signal-config": {
-        "policy-id": "integer"
+        "policy-id": integer
        }
      }
 
@@ -1397,7 +1453,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 25]
+Reddy, et al.             Expires June 9, 2017                 [Page 26]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -1439,29 +1495,9 @@ Internet-Draft             DOTS Signal Channel             December 2016
    server FQDN, and the alternate DOTS server IP addresses and TTL (time
    to live) values in the CBOR body.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Reddy, et al.             Expires June 6, 2017                 [Page 26]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
-
    {
        "alt-server": "string",
-       "alt-server-record":
-       [
+       "alt-server-record": [
          {
            "addr": "string"
            "TTL" :  "integer",
@@ -1470,6 +1506,13 @@ Internet-Draft             DOTS Signal Channel             December 2016
    }
 
                       Figure 19: Error response body
+
+
+
+Reddy, et al.             Expires June 9, 2017                 [Page 27]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
 
    The header fields are described below:
 
@@ -1486,8 +1529,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
    {
 
        "alt-server": "www.example-alt.com",
-       "alt-server-record":
-       [
+       "alt-server-record": [
          {
            "TTL" :  3600,
            "addr": "2002:db8:6401::1"
@@ -1495,8 +1537,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
          {
            "TTL" :  1800,
            "addr": "2002:db8:6401::2"
-         },
-
+         }
        ]
    }
 
@@ -1506,14 +1547,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
    request as having failed, but SHOULD try the request with the
    alternate DOTS server.  During a DDOS attack, the DNS server may be
    subjected to DDOS attack, alternate DOTS server IP addresses conveyed
-
-
-
-Reddy, et al.             Expires June 6, 2017                 [Page 27]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
-
    in the 3.00 response help the DOTS client to skip DNS lookup of the
    alternate DOTS server and can try to establish UDP or TCP session
    with the alternate DOTS server IP addresses.  The DOTS client SHOULD
@@ -1529,6 +1562,14 @@ Internet-Draft             DOTS Signal Channel             December 2016
    needing a new handshake when a DOTS signal needs to be conveyed to
    the DOTS server.  In DOTS over UDP, heartbeat messages can be
    exchanged between the DOTS agents using the "COAP ping" mechanism
+
+
+
+Reddy, et al.             Expires June 9, 2017                 [Page 28]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
+
    (Section 4.2 in [RFC7252]).  The DOTS agent sends an Empty
    Confirmable message and the peer DOTS agent will respond by sending
    an Reset message.  In DOTS over TCP, heartbeat messages can be
@@ -1561,15 +1602,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
       ServerHello, and can be used by servers that cannot obtain
       certificates (e.g., DOTS gateways on private networks).
 
-
-
-
-
-Reddy, et al.             Expires June 6, 2017                 [Page 28]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
-
    Implementations compliant with this profile SHOULD implement all of
    the following items to reduce the delay required to deliver a DOTS
    signal:
@@ -1584,6 +1616,15 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
    o  TCP Fast Open [RFC7413] can reduce the number of round-trips to
       convey DOTS signal.
+
+
+
+
+
+Reddy, et al.             Expires June 9, 2017                 [Page 29]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
 
 6.1.  MTU and Fragmentation Issues
 
@@ -1618,14 +1659,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
    TLS 1.3 [I-D.ietf-tls-tls13] provides critical latency improvements
    for connection establishment over TLS 1.2.  The DTLS 1.3 protocol
    [I-D.rescorla-tls-dtls13] is based on the TLS 1.3 protocol and
-
-
-
-Reddy, et al.             Expires June 6, 2017                 [Page 29]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
-
    provides equivalent security guarantees.  (D)TLS 1.3 provides two
    basic handshake modes of interest to DOTS signal channel:
 
@@ -1641,6 +1674,14 @@ Internet-Draft             DOTS Signal Channel             December 2016
       likely with the DOTS signal channel.  The DOTS client SHOULD
       establish a (D)TLS session with the DOTS server during peacetime
       and share a PSK.  During DDOS attack, the DOTS client can use the
+
+
+
+Reddy, et al.             Expires June 9, 2017                 [Page 30]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
+
       (D)TLS session to convey the DOTS signal message and if there is
       no response from the server after multiple re-tries then the DOTS
       client can resume the (D)TLS session in 0-RTT mode using PSK.  A
@@ -1674,16 +1715,28 @@ Internet-Draft             DOTS Signal Channel             December 2016
    only authorized DOTS clients are allowed to send DOTS signals to a
    DOTS gateway.  DOTS gateway and DOTS server MUST perform mutual
    authentication; DOTS server only allows DOTS signals from authorized
+   DOTS gateway, creating a two-link chain of transitive authentication
+   between the DOTS client and the DOTS server.
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 30]
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reddy, et al.             Expires June 9, 2017                 [Page 31]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
-
-   DOTS gateway, creating a two-link chain of transitive authentication
-   between the DOTS client and the DOTS server.
 
  +-------------------------------------------------+
  |        example.com domain          +---------+  |
@@ -1733,7 +1786,10 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 31]
+
+
+
+Reddy, et al.             Expires June 9, 2017                 [Page 32]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -1789,7 +1845,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 32]
+Reddy, et al.             Expires June 9, 2017                 [Page 33]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -1845,7 +1901,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 33]
+Reddy, et al.             Expires June 9, 2017                 [Page 34]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -1901,7 +1957,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 34]
+Reddy, et al.             Expires June 9, 2017                 [Page 35]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -1957,7 +2013,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 35]
+Reddy, et al.             Expires June 9, 2017                 [Page 36]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
@@ -2013,4 +2069,4 @@ Authors' Addresses
 
 
 
-Reddy, et al.             Expires June 6, 2017                 [Page 36]
+Reddy, et al.             Expires June 9, 2017                 [Page 37]
