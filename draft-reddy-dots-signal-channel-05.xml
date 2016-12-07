@@ -791,8 +791,7 @@ a1                                      # map(1)
           more mandatory attributes, then 4.00 (Bad Request) will be returned
           in the response or if the request contains invalid or unknown
           parameters then 4.02 (Invalid query) will be returned in the
-          response. The CoAP response will include the CBOR body received in
-          the request.</t>
+          response.</t>
         </section>
 
         <section anchor="del" title="Withdraw a DOTS Signal">
