@@ -338,8 +338,8 @@ DOTS client                                               DOTS server
         response information such as errors. This specification uses the
         encoding rules defined in <xref
         target="I-D.ietf-core-yang-cbor"></xref> for representing DOTS signal
-        channel configuration data using YANG (<xref target="YANG"></xref>) as
-        CBOR data.</t>
+        channel configuration data defined using YANG (<xref
+        target="YANG"></xref>) as CBOR data.</t>
       </section>
 
       <section anchor="YANG" title="DOTS Signal YANG Model">

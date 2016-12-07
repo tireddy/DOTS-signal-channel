@@ -372,7 +372,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
    that convey request parameters and response information such as
    errors.  This specification uses the encoding rules defined in
    [I-D.ietf-core-yang-cbor] for representing DOTS signal channel
-   configuration data using YANG (Section 5.2) as CBOR data.
+   configuration data defined using YANG (Section 5.2) as CBOR data.
 
 5.2.  DOTS Signal YANG Model
 
