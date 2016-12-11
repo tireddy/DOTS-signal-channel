@@ -76,18 +76,6 @@
       </address>
     </author>
 
-    <author fullname="Dan Wing" initials="D." surname="Wing">
-      <address>
-        <postal>
-          <street></street>
-
-          <country>USA</country>
-        </postal>
-
-        <email>dwing-ietf@fuggles.com</email>
-      </address>
-    </author>
-
     <date />
 
     <workgroup>DOTS</workgroup>
@@ -670,13 +658,15 @@ module ietf-dots-signal-config {
               response. This is an optional attribute in the request.</t>
             </list></t>
 
-          <t>In the POST request at least one of the attributes target-ip or
-          target-port or target-protocol or FQDN or URI or E.164 or alias MUST
-          be present. The relative order of two mitigation requests is
-          determined by comparing their respective policy identifiers. The
-          mitigation request with higher numeric policy identifier value has
-          higher precedence (and thus will match before) than the mitigation
-          request with lower numeric policy identifier value.</t>
+          <t>The CBOR key values for the parameters are defined in <xref
+          target="mapping"></xref>. In the POST request at least one of the
+          attributes target-ip or target-port or target-protocol or FQDN or
+          URI or E.164 or alias MUST be present. The relative order of two
+          mitigation requests is determined by comparing their respective
+          policy identifiers. The mitigation request with higher numeric
+          policy identifier value has higher precedence (and thus will match
+          before) than the mitigation request with lower numeric policy
+          identifier value.</t>
 
           <t><xref target="Figure2"></xref> shows a POST request to signal
           that ports 80, 8080, and 443 on the servers 2002:db8:6401::1 and
@@ -1311,8 +1301,8 @@ a1                                      # map(1)
       </section>
     </section>
 
-    <section title="Mapping parameters to CBOR">
-      <t> All parameters in DOTS signal channel are mapped to CBOR types as
+    <section anchor="mapping" title="Mapping parameters to CBOR">
+      <t>All parameters in DOTS signal channel are mapped to CBOR types as
       follows and are given an integer key value to save space.</t>
 
       <t><figure anchor="fig:cborMappingValuesAccessTokens"
@@ -1796,6 +1786,8 @@ a1                                      # map(1)
 
       <t>Robert Moskowitz HTT Consulting Oak Park, MI 42837 United States
       Email: rgm@htt-consult.com</t>
+
+      <t>Dan Wing Email: dwing-ietf@fuggles.com</t>
     </section>
 
     <section anchor="ack" title="Acknowledgements">
