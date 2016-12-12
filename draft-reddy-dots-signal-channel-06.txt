@@ -862,25 +862,25 @@ Internet-Draft             DOTS Signal Channel             December 2016
                       Figure 6: POST for DOTS signal
 
    The DOTS server indicates the result of processing the POST request
-   using CoAP response codes.  CoAP 2.xx codes are success, CoAP 4.xx
-   codes are some sort of invalid requests and 5.xx codes are returned
-   if the DOTS server has erred or is incapable of performing the
-   mitigation.  Response code 2.01 (Created) will be returned in the
-   response if the DOTS server has accepted the mitigation request and
-   will try to mitigate the attack.  If the request is missing one or
-   more mandatory attributes, then 4.00 (Bad Request) will be returned
-   in the response or if the request contains invalid or unknown
-   parameters then 4.02 (Invalid query) will be returned in the
-   response.
+   using CoAP response codes.  CoAP 2.xx codes are success.  CoAP 4.xx
+   codes are some sort of invalid requests (e.g. the mitigation request
+   conflicts with a previous mitigation request already submitted to the
+   DOTS server).  COAP 5.xx codes are returned if the DOTS server has
+   erred or is currently unavailable to provide mitigation in response
+   to the mitigation request from the DOTS client.  Response code 2.01
+   (Created) will be returned in the response if the DOTS server has
+   accepted the mitigation request and will try to mitigate the attack.
+   If the request is missing one or more mandatory attributes, then 4.00
+   (Bad Request) will be returned in the response or if the request
+   contains invalid or unknown parameters then 4.02 (Invalid query) will
+   be returned in the response.  The payload of client or server error
+   explains the error situation of the result of the requested action
+   (Section 5.5 in [RFC7252]).
 
 5.3.2.  Withdraw a DOTS Signal
 
    A DELETE request is used to withdraw a DOTS signal from a DOTS server
    (Figure 7).
-
-
-
-
 
 
 
