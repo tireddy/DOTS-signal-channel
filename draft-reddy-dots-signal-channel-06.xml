@@ -358,7 +358,7 @@ module: ietf-dots-signal
 
 module ietf-dots-signal {
       namespace "urn:ietf:params:xml:ns:yang:ietf-dots-signal";
-      prefix "alias";
+      prefix "signal";
       import ietf-inet-types {
           prefix "inet";
       }
@@ -458,7 +458,7 @@ module: ietf-dots-signal-config
 
 module ietf-dots-signal-config {
      namespace "urn:ietf:params:xml:ns:yang:ietf-dots-signal-config";
-     prefix "alias";
+     prefix "config";
      organization "Cisco Systems, Inc.";
      contact "Tirumaleswar Reddy <tireddy@cisco.com>";
 
@@ -597,6 +597,9 @@ module ietf-dots-signal-config {
           "string"
         ],
         "E.164": [
+          "string"
+        ],
+        "alias": [
           "string"
         ],
        "lifetime": integer
@@ -972,6 +975,9 @@ a1                                      # map(1)
         "E.164": [
           "string"
         ],
+        "alias": [
+          "string"
+        ],
        "lifetime": integer,
        "attack-status": "string"
      }                           
@@ -1326,15 +1332,16 @@ a1                                      # map(1)
 | FQDN               | 8                      | 4                        |
 | URI                | 9                      | 4                        |
 | E.164              | 10                     | 4                        |
-| lifetime           | 11                     | 0                        |
-| attack-status      | 12                     | 3 (string)               |
-| signal-config      | 13                     | 5                        |
-| heartbeat-interval | 14                     | 0                        |
-| max-retransmit     | 15                     | 0                        |
-| ack-timeout        | 16                     | 0                        |
-| ack-random-factor  | 17                     | 7                         |
-| MinValue           | 18                     | 0                        |
-| MaxValue           | 19                     | 0                        |
+| alias              | 11                     | 4                        |
+| lifetime           | 12                     | 0                        |
+| attack-status      | 13                     | 3 (string)               |
+| signal-config      | 14                     | 5                        |
+| heartbeat-interval | 15                     | 0                        |
+| max-retransmit     | 16                     | 0                        |
+| ack-timeout        | 17                     | 0                        |
+| ack-random-factor  | 18                     | 7                         |
+| MinValue           | 19                     | 0                        |
+| MaxValue           | 20                     | 0                        |
 \--------------------+------------------------+--------------------------/]]></artwork>
 
           <!--
@@ -1657,9 +1664,19 @@ a1                                      # map(1)
 
               <t>Specification Document(s): this document</t>
             </list><list style="symbols">
-              <t>Parameter Name: <spanx style="verb">lifetime</spanx></t>
+              <t>Parameter Name: alias</t>
 
               <t>CBOR Key Value: 11</t>
+
+              <t>CBOR Major Type: 4</t>
+
+              <t>Change Controller: IESG</t>
+
+              <t>Specification Document(s): this document</t>
+            </list><list style="symbols">
+              <t>Parameter Name: <spanx style="verb">lifetime</spanx></t>
+
+              <t>CBOR Key Value: 12</t>
 
               <t>CBOR Major Type: 0</t>
 
@@ -1669,7 +1686,7 @@ a1                                      # map(1)
             </list><list style="symbols">
               <t>Parameter Name: attack-status</t>
 
-              <t>CBOR Key Value: 12</t>
+              <t>CBOR Key Value: 13</t>
 
               <t>CBOR Major Type: 3</t>
 
@@ -1679,7 +1696,7 @@ a1                                      # map(1)
             </list><list style="symbols">
               <t>Parameter Name: signal-config</t>
 
-              <t>CBOR Key Value: 13</t>
+              <t>CBOR Key Value: 14</t>
 
               <t>CBOR Major Type: 5</t>
 
@@ -1689,7 +1706,7 @@ a1                                      # map(1)
             </list><list style="symbols">
               <t>Parameter Name: heartbeat-interval</t>
 
-              <t>CBOR Key Value: 14</t>
+              <t>CBOR Key Value: 15</t>
 
               <t>CBOR Major Type: 0</t>
 
@@ -1699,7 +1716,7 @@ a1                                      # map(1)
             </list><list style="symbols">
               <t>Parameter Name: max-retransmit</t>
 
-              <t>CBOR Key Value: 15</t>
+              <t>CBOR Key Value: 16</t>
 
               <t>CBOR Major Type: 0</t>
 
@@ -1709,7 +1726,7 @@ a1                                      # map(1)
             </list><list style="symbols">
               <t>Parameter Name: ack-timeout</t>
 
-              <t>CBOR Key Value: 16</t>
+              <t>CBOR Key Value: 17</t>
 
               <t>CBOR Major Type: 0</t>
 
@@ -1719,7 +1736,7 @@ a1                                      # map(1)
             </list><list style="symbols">
               <t>Parameter Name: ack-random-factor</t>
 
-              <t>CBOR Key Value: 17</t>
+              <t>CBOR Key Value: 18</t>
 
               <t>CBOR Major Type: 7</t>
 
@@ -1729,7 +1746,7 @@ a1                                      # map(1)
             </list><list style="symbols">
               <t>Parameter Name: MinValue</t>
 
-              <t>CBOR Key Value: 18</t>
+              <t>CBOR Key Value: 19</t>
 
               <t>CBOR Major Type: 0</t>
 
@@ -1739,7 +1756,7 @@ a1                                      # map(1)
             </list><list style="symbols">
               <t>Parameter Name: MaxValue</t>
 
-              <t>CBOR Key Value: 19</t>
+              <t>CBOR Key Value: 20</t>
 
               <t>CBOR Major Type: 0</t>
 
