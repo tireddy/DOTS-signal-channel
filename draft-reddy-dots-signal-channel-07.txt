@@ -87,16 +87,16 @@ Table of Contents
      5.4.  DOTS Signal Channel Session Configuration . . . . . . . .  25
        5.4.1.  Discover Acceptable Configuration Parameters  . . . .  25
        5.4.2.  Convey DOTS Signal Channel Session Configuration  . .  26
-       5.4.3.  Delete DOTS Signal Channel Session Configuration  . .  28
+       5.4.3.  Delete DOTS Signal Channel Session Configuration  . .  29
        5.4.4.  Retrieving DOTS Signal Channel Session Configuration   29
-     5.5.  Redirected Signaling  . . . . . . . . . . . . . . . . . .  29
-     5.6.  Heartbeat Mechanism . . . . . . . . . . . . . . . . . . .  30
-   6.  Mapping parameters to CBOR  . . . . . . . . . . . . . . . . .  31
-   7.  (D)TLS Protocol Profile and Performance considerations  . . .  31
-     7.1.  MTU and Fragmentation Issues  . . . . . . . . . . . . . .  32
-   8.  (D)TLS 1.3 considerations . . . . . . . . . . . . . . . . . .  33
+     5.5.  Redirected Signaling  . . . . . . . . . . . . . . . . . .  30
+     5.6.  Heartbeat Mechanism . . . . . . . . . . . . . . . . . . .  31
+   6.  Mapping parameters to CBOR  . . . . . . . . . . . . . . . . .  32
+   7.  (D)TLS Protocol Profile and Performance considerations  . . .  32
+     7.1.  MTU and Fragmentation Issues  . . . . . . . . . . . . . .  33
+   8.  (D)TLS 1.3 considerations . . . . . . . . . . . . . . . . . .  34
    9.  Mutual Authentication of DOTS Agents & Authorization of DOTS
-       Clients . . . . . . . . . . . . . . . . . . . . . . . . . . .  34
+       Clients . . . . . . . . . . . . . . . . . . . . . . . . . . .  35
    10. IANA Considerations . . . . . . . . . . . . . . . . . . . . .  36
      10.1.  DOTS signal channel CBOR Mappings Registry . . . . . . .  36
        10.1.1.  Registration Template  . . . . . . . . . . . . . . .  36
@@ -436,7 +436,7 @@ module ietf-dots-signal {
           description "top level container for mitigation request";
           list scope {
              key policy-id;
-             description "policy identifier";
+             description "Identifier of the mitigation request";
              leaf policy-id {
                 type int32;
                 description "policy identifier";
@@ -584,7 +584,8 @@ module ietf-dots-signal-config {
                        configuration";
           leaf policy-id {
               type int32;
-              description "policy identifier";
+              description "Identifier of the DOTS signal channel
+                           session configuration data";
           }
           leaf heartbeat-interval {
               type int16;
@@ -609,7 +610,6 @@ module ietf-dots-signal-config {
 }
 
 <CODE ENDS>
-
 
 
 
@@ -1351,7 +1351,8 @@ Internet-Draft             DOTS Signal Channel             December 2016
 |--------------------+------------------------------------------------------|
 | 1                  | DOTS client determines that it is still under attack.|
 +---------------------------------------------------------------------------+
-| 2                  | Attack is successfully mitigated                     |
+| 2                  | DOTS client determines that the attack is            |
+|                    | successfully mitigated                               |
 |                    | (e.g., attack traffic is not seen).                  |
 \--------------------+------------------------------------------------------/
 
@@ -1386,6 +1387,21 @@ Internet-Draft             DOTS Signal Channel             December 2016
    Figure 12 shows how to obtain acceptable configuration parameters for
    the server.
 
+
+
+
+
+
+
+
+
+
+
+Reddy, et al.             Expires June 26, 2017                [Page 25]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
+
      Header: GET (Code=0.01)
      Uri-Host: "host"
      Uri-Path: ".well-known"
@@ -1394,13 +1410,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
      Uri-Path: "config"
 
                  Figure 12: GET to retrieve configuration
-
-
-
-Reddy, et al.             Expires June 26, 2017                [Page 25]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
 
    The DOTS server in the 2.05 (Content) response conveys the minimum
    and maximum attribute values acceptable by the DOTS server.
@@ -1427,6 +1436,28 @@ Internet-Draft             DOTS Signal Channel             December 2016
    signaling channel session configuration is applicable to all DOTS
    signal channel sessions between the DOTS agents.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reddy, et al.             Expires June 26, 2017                [Page 26]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
+
      Header: POST (Code=0.02)
      Uri-Host: "host"
      Uri-Path: ".well-known"
@@ -1449,16 +1480,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
    The parameters are described below:
 
-
-
-
-
-Reddy, et al.             Expires June 26, 2017                [Page 26]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
-
-   policy-id:  An identifier of the DOTS signal channel session
+   policy-id:  Identifier of the DOTS signal channel session
       configuration data represented as an integer.  This identifier
       MUST be generated by the DOTS client.  This document does not make
       any assumption about how this identifier is generated.  This is a
@@ -1484,6 +1506,14 @@ Internet-Draft             DOTS Signal Channel             December 2016
    Figure 15 shows a POST request to convey the configuration parameters
    for the DOTS signal channel.
 
+
+
+
+Reddy, et al.             Expires June 26, 2017                [Page 27]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
+
      Header: POST (Code=0.02)
      Uri-Host: "www.example.com"
      Uri-Path: ".well-known"
@@ -1506,14 +1536,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
    The DOTS server indicates the result of processing the POST request
    using CoAP response codes.  The CoAP response will include the CBOR
    body received in the request.  Response code 2.01 (Created) will be
-
-
-
-Reddy, et al.             Expires June 26, 2017                [Page 27]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
-
    returned in the response if the DOTS server has accepted the
    configuration parameters.  If the request is missing one or more
    mandatory attributes then 4.00 (Bad Request) will be returned in the
@@ -1536,6 +1558,17 @@ Internet-Draft             DOTS Signal Channel             December 2016
      }
 
                       Figure 16: Error response body
+
+
+
+
+
+
+
+Reddy, et al.             Expires June 26, 2017                [Page 28]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
 
 5.4.3.  Delete DOTS Signal Channel Session Configuration
 
@@ -1561,15 +1594,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
    conveyed in the DELETE request in its configuration data, then it
    responds with a 4.04 (Not Found) error response code.  The DOTS
    server successfully acknowledges a DOTS client's request to remove
-
-
-
-
-Reddy, et al.             Expires June 26, 2017                [Page 28]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
-
    the DOTS signal channel session configuration using 2.02 (Deleted)
    response code.
 
@@ -1593,6 +1617,14 @@ Internet-Draft             DOTS Signal Channel             December 2016
      }
 
                  Figure 18: GET to retrieve configuration
+
+
+
+
+Reddy, et al.             Expires June 26, 2017                [Page 29]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
 
 5.5.  Redirected Signaling
 
@@ -1618,14 +1650,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
                       Figure 19: Error response body
 
-
-
-
-Reddy, et al.             Expires June 26, 2017                [Page 29]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
-
    The parameters are described below:
 
    alt-server:  FQDN of alternate DOTS server.
@@ -1635,6 +1659,28 @@ Internet-Draft             DOTS Signal Channel             December 2016
    Figure 20 shows a 3.00 response to convey the DOTS alternate server
    www.example-alt.com, its IP addresses 2002:db8:6401::1 and
    2002:db8:6401::2, and TTL values 3600 and 1800.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reddy, et al.             Expires June 26, 2017                [Page 30]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
 
    {
 
@@ -1674,19 +1720,23 @@ Internet-Draft             DOTS Signal Channel             December 2016
    exchanged between the DOTS agents using the "COAP ping" mechanism
    (Section 4.2 in [RFC7252]).  The DOTS agent sends an Empty
    Confirmable message and the peer DOTS agent will respond by sending
-
-
-
-Reddy, et al.             Expires June 26, 2017                [Page 30]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
-
    an Reset message.  In DOTS over TCP, heartbeat messages can be
    exchanged between the DOTS agents using the Ping and Pong messages
    (Section 4.4 in [I-D.ietf-core-coap-tcp-tls]).  The DOTS agent sends
    an Ping message and the peer DOTS agent will respond by sending an
    single Pong message.
+
+
+
+
+
+
+
+
+Reddy, et al.             Expires June 26, 2017                [Page 31]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
 
 6.  Mapping parameters to CBOR
 
@@ -1730,18 +1780,19 @@ Internet-Draft             DOTS Signal Channel             December 2016
    protocol downgrade.  These are general attacks on (D)TLS and not
    specific to DOTS over (D)TLS; please refer to the (D)TLS RFCs for
    discussion of these security issues.  DOTS agents MUST adhere to the
-
-
-
-Reddy, et al.             Expires June 26, 2017                [Page 31]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
-
    (D)TLS implementation recommendations and security considerations of
    [RFC7525] except with respect to (D)TLS version.  Since encryption of
    DOTS using (D)TLS is virtually a green-field deployment DOTS agents
    MUST implement only (D)TLS 1.2 or later.
+
+
+
+
+
+Reddy, et al.             Expires June 26, 2017                [Page 32]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
 
    Implementations compliant with this profile MUST implement all of the
    following items:
@@ -1786,19 +1837,19 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
    Implementation Note: DOTS choice of message size parameters works
    well with IPv6 and with most of today's IPv4 paths.  However, with
-
-
-
-Reddy, et al.             Expires June 26, 2017                [Page 32]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
-
    IPv4, it is harder to absolutely ensure that there is no IP
    fragmentation.  If IPv4 support on unusual networks is a
    consideration and path MTU is unknown, implementations may want to
    limit themselves to more conservative IPv4 datagram sizes such as 576
    bytes, as per [RFC0791] IP packets up to 576 bytes should never need
+
+
+
+Reddy, et al.             Expires June 26, 2017                [Page 33]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
+
    to be fragmented, thus sending a maximum of 500 bytes of DOTS signal
    over a UDP datagram will generally avoid IP fragmentation.
 
@@ -1827,29 +1878,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
       simplified TLS 1.3 handshake with 0-RTT DOTS signal message
       exchange is shown in Figure 22.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Reddy, et al.             Expires June 26, 2017                [Page 33]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
-
           DOTS Client                                    DOTS Server
 
          ClientHello
@@ -1869,6 +1897,15 @@ Internet-Draft             DOTS Signal Channel             December 2016
 
                   Figure 22: TLS 1.3 handshake with 0-RTT
 
+
+
+
+
+Reddy, et al.             Expires June 26, 2017                [Page 34]
+
+Internet-Draft             DOTS Signal Channel             December 2016
+
+
 9.  Mutual Authentication of DOTS Agents & Authorization of DOTS Clients
 
    (D)TLS based on client certificate can be used for mutual
@@ -1879,32 +1916,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
    authentication; DOTS server only allows DOTS signals from authorized
    DOTS gateway, creating a two-link chain of transitive authentication
    between the DOTS client and the DOTS server.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Reddy, et al.             Expires June 26, 2017                [Page 34]
-
-Internet-Draft             DOTS Signal Channel             December 2016
-
 
  +-------------------------------------------------+
  |        example.com domain          +---------+  |
@@ -1943,17 +1954,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
    DDOS detector to request DDOS mitigation, but does not permit the
    user of type 'guest' to request DDOS mitigation.
 
-   Also, DOTS gateway and DOTS server MUST perform mutual authentication
-   using certificates.  A DOTS server will only allow a DOTS gateway
-   with a certificate for a particular domain to request mitigation for
-   that domain.  In reference to Figure 23, the DOTS server only allows
-   the DOTS gateway to request mitigation for 'example.com' domain and
-   not for other domains.
-
-
-
-
-
 
 
 
@@ -1961,6 +1961,13 @@ Reddy, et al.             Expires June 26, 2017                [Page 35]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
+
+   Also, DOTS gateway and DOTS server MUST perform mutual authentication
+   using certificates.  A DOTS server will only allow a DOTS gateway
+   with a certificate for a particular domain to request mitigation for
+   that domain.  In reference to Figure 23, the DOTS server only allows
+   the DOTS gateway to request mitigation for 'example.com' domain and
+   not for other domains.
 
 10.  IANA Considerations
 
@@ -2003,13 +2010,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
    o  Parameter Name: "scope"
    o  CBOR Key Value: 2
    o  CBOR Major Type: 5
-   o  Change Controller: IESG
-   o  Specification Document(s): this document
-
-   o  Parameter Name: "policy-id"
-   o  CBOR Key Value: 3
-   o  CBOR Major Type: 0
-   o  Change Controller: IESG
 
 
 
@@ -2018,6 +2018,13 @@ Reddy, et al.             Expires June 26, 2017                [Page 36]
 Internet-Draft             DOTS Signal Channel             December 2016
 
 
+   o  Change Controller: IESG
+   o  Specification Document(s): this document
+
+   o  Parameter Name: "policy-id"
+   o  CBOR Key Value: 3
+   o  CBOR Major Type: 0
+   o  Change Controller: IESG
    o  Specification Document(s): this document
 
    o  Parameter Name:target-ip
@@ -2059,13 +2066,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
    o  Parameter Name: "URI"
    o  CBOR Key Value: 10
    o  CBOR Major Type: 4
-   o  Change Controller: IESG
-   o  Specification Document(s): this document
-
-   o  Parameter Name: "E.164"
-   o  CBOR Key Value: 11
-   o  CBOR Major Type: 4
-   o  Change Controller: IESG
 
 
 
@@ -2074,6 +2074,13 @@ Reddy, et al.             Expires June 26, 2017                [Page 37]
 Internet-Draft             DOTS Signal Channel             December 2016
 
 
+   o  Change Controller: IESG
+   o  Specification Document(s): this document
+
+   o  Parameter Name: "E.164"
+   o  CBOR Key Value: 11
+   o  CBOR Major Type: 4
+   o  Change Controller: IESG
    o  Specification Document(s): this document
 
    o  Parameter Name: alias
@@ -2115,13 +2122,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
    o  Parameter Name: ack-timeout
    o  CBOR Key Value: 18
    o  CBOR Major Type: 0
-   o  Change Controller: IESG
-   o  Specification Document(s): this document
-
-   o  Parameter Name: ack-random-factor
-   o  CBOR Key Value: 19
-   o  CBOR Major Type: 7
-   o  Change Controller: IESG
 
 
 
@@ -2130,6 +2130,13 @@ Reddy, et al.             Expires June 26, 2017                [Page 38]
 Internet-Draft             DOTS Signal Channel             December 2016
 
 
+   o  Change Controller: IESG
+   o  Specification Document(s): this document
+
+   o  Parameter Name: ack-random-factor
+   o  CBOR Key Value: 19
+   o  CBOR Major Type: 7
+   o  Change Controller: IESG
    o  Specification Document(s): this document
 
    o  Parameter Name: MinValue
@@ -2171,13 +2178,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
    Involved functional elements in the cooperation system must establish
    exchange instructions and notification over a secure and
    authenticated channel.  Adequate filters can be enforced to avoid
-   that nodes outside a trusted domain can inject request such as
-   deleting filtering rules.  Nevertheless, attacks can be initiated
-   from within the trusted domain if an entity has been corrupted.
-   Adequate means to monitor trusted nodes should also be enabled.
-
-
-
 
 
 
@@ -2185,6 +2185,11 @@ Reddy, et al.             Expires June 26, 2017                [Page 39]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
+
+   that nodes outside a trusted domain can inject request such as
+   deleting filtering rules.  Nevertheless, attacks can be initiated
+   from within the trusted domain if an entity has been corrupted.
+   Adequate means to monitor trusted nodes should also be enabled.
 
 12.  Contributors
 
@@ -2229,11 +2234,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
               Authentication Option", RFC 5925, DOI 10.17487/RFC5925,
               June 2010, <http://www.rfc-editor.org/info/rfc5925>.
 
-   [RFC6347]  Rescorla, E. and N. Modadugu, "Datagram Transport Layer
-              Security Version 1.2", RFC 6347, DOI 10.17487/RFC6347,
-              January 2012, <http://www.rfc-editor.org/info/rfc6347>.
-
-
 
 
 
@@ -2241,6 +2241,10 @@ Reddy, et al.             Expires June 26, 2017                [Page 40]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
+
+   [RFC6347]  Rescorla, E. and N. Modadugu, "Datagram Transport Layer
+              Security Version 1.2", RFC 6347, DOI 10.17487/RFC6347,
+              January 2012, <http://www.rfc-editor.org/info/rfc6347>.
 
    [RFC7250]  Wouters, P., Ed., Tschofenig, H., Ed., Gilmore, J.,
               Weiler, S., and T. Kivinen, "Using Raw Public Keys in
@@ -2285,11 +2289,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
               Requirements", draft-ietf-dots-requirements-03 (work in
               progress), October 2016.
 
-   [I-D.ietf-dots-use-cases]
-              Dobbins, R., Fouant, S., Migault, D., Moskowitz, R.,
-              Teague, N., Xia, L., and K. Nishizuka, "Use cases for DDoS
-              Open Threat Signaling", draft-ietf-dots-use-cases-03 (work
-              in progress), November 2016.
+
 
 
 
@@ -2297,6 +2297,12 @@ Reddy, et al.             Expires June 26, 2017                [Page 41]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
+
+   [I-D.ietf-dots-use-cases]
+              Dobbins, R., Fouant, S., Migault, D., Moskowitz, R.,
+              Teague, N., Xia, L., and K. Nishizuka, "Use cases for DDoS
+              Open Threat Signaling", draft-ietf-dots-use-cases-03 (work
+              in progress), November 2016.
 
    [I-D.ietf-tls-tls13]
               Rescorla, E., "The Transport Layer Security (TLS) Protocol
@@ -2337,12 +2343,6 @@ Internet-Draft             DOTS Signal Channel             December 2016
               Mitigations", RFC 4987, DOI 10.17487/RFC4987, August 2007,
               <http://www.rfc-editor.org/info/rfc4987>.
 
-   [RFC5077]  Salowey, J., Zhou, H., Eronen, P., and H. Tschofenig,
-              "Transport Layer Security (TLS) Session Resumption without
-              Server-Side State", RFC 5077, DOI 10.17487/RFC5077,
-              January 2008, <http://www.rfc-editor.org/info/rfc5077>.
-
-
 
 
 
@@ -2353,6 +2353,11 @@ Reddy, et al.             Expires June 26, 2017                [Page 42]
 
 Internet-Draft             DOTS Signal Channel             December 2016
 
+
+   [RFC5077]  Salowey, J., Zhou, H., Eronen, P., and H. Tschofenig,
+              "Transport Layer Security (TLS) Session Resumption without
+              Server-Side State", RFC 5077, DOI 10.17487/RFC5077,
+              January 2008, <http://www.rfc-editor.org/info/rfc5077>.
 
    [RFC6520]  Seggelmann, R., Tuexen, M., and M. Williams, "Transport
               Layer Security (TLS) and Datagram Transport Layer Security
@@ -2397,11 +2402,6 @@ Authors' Addresses
    India
 
    Email: tireddy@cisco.com
-
-
-
-
-
 
 
 
