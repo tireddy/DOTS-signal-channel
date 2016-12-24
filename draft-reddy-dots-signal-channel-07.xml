@@ -1028,7 +1028,7 @@ a1                                      # map(1)
              "string"
            ],
           "lifetime": integer,
-          "attack-status": "string"
+          "attack-status": integer
         }
       ]
     }
@@ -1175,9 +1175,9 @@ a1                                      # map(1)
             </list></t>
 
           <t>In the POST request at least one of the attributes
-          heartbeat-interval or max-retransmit or ack-timeout or ack-random-
-          factor MUST be present. The POST request with higher numeric
-          identifier value over-rides the DOTS signal channel session
+          heartbeat-interval or max-retransmit or ack-timeout or
+          ack-random-factor MUST be present. The POST request with higher
+          numeric identifier value over-rides the DOTS signal channel session
           configuration data installed by a POST request with a lower numeric
           identifier value.</t>
 

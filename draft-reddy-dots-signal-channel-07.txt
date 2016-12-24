@@ -1327,7 +1327,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
                 "string"
               ],
              "lifetime": integer,
-             "attack-status": "string"
+             "attack-status": integer
            }
          ]
        }
@@ -1498,7 +1498,7 @@ Internet-Draft             DOTS Signal Channel             December 2016
       CoAP).  This is an optional attribute.
 
    In the POST request at least one of the attributes heartbeat-interval
-   or max-retransmit or ack-timeout or ack-random- factor MUST be
+   or max-retransmit or ack-timeout or ack-random-factor MUST be
    present.  The POST request with higher numeric identifier value over-
    rides the DOTS signal channel session configuration data installed by
    a POST request with a lower numeric identifier value.
