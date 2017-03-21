@@ -5,14 +5,14 @@
 DOTS                                                            T. Reddy
 Internet-Draft                                                     Cisco
 Intended status: Standards Track                            M. Boucadair
-Expires: September 16, 2017                                       Orange
+Expires: September 22, 2017                                       Orange
                                                                 P. Patil
                                                                    Cisco
                                                             A. Mortensen
                                                     Arbor Networks, Inc.
                                                                N. Teague
                                                           Verisign, Inc.
-                                                          March 15, 2017
+                                                          March 21, 2017
 
 
    Distributed Denial-of-Service Open Threat Signaling (DOTS) Signal
@@ -44,7 +44,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on September 16, 2017.
+   This Internet-Draft will expire on September 22, 2017.
 
 
 
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Reddy, et al.          Expires September 16, 2017               [Page 1]
+Reddy, et al.          Expires September 22, 2017               [Page 1]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Reddy, et al.          Expires September 16, 2017               [Page 2]
+Reddy, et al.          Expires September 22, 2017               [Page 2]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -165,7 +165,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017               [Page 3]
+Reddy, et al.          Expires September 22, 2017               [Page 3]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -221,7 +221,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017               [Page 4]
+Reddy, et al.          Expires September 22, 2017               [Page 4]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -277,7 +277,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017               [Page 5]
+Reddy, et al.          Expires September 22, 2017               [Page 5]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -333,7 +333,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017               [Page 6]
+Reddy, et al.          Expires September 22, 2017               [Page 6]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -389,7 +389,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017               [Page 7]
+Reddy, et al.          Expires September 22, 2017               [Page 7]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -445,7 +445,7 @@ module ietf-dots-signal {
 
 
 
-Reddy, et al.          Expires September 16, 2017               [Page 8]
+Reddy, et al.          Expires September 22, 2017               [Page 8]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -501,7 +501,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017               [Page 9]
+Reddy, et al.          Expires September 22, 2017               [Page 9]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -528,7 +528,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
    module: ietf-dots-signal-config
        +--rw signal-config
           +--rw policy-id?            int32
-          +--rw heartbeat-interval?   int16
+          +--rw heartbeat-timeout?    int16
           +--rw max-retransmit?       int16
           +--rw ack-timeout?          int16
           +--rw ack-random-factor?    decimal64
@@ -557,7 +557,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 10]
+Reddy, et al.          Expires September 22, 2017              [Page 10]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -587,9 +587,9 @@ module ietf-dots-signal-config {
               description "Identifier for the DOTS signal channel
                            session configuration data";
           }
-          leaf heartbeat-interval {
+          leaf heartbeat-timeout {
               type int16;
-              description "heartbeat interval";
+              description "heartbeat timeout";
           }
           leaf max-retransmit {
               type int16;
@@ -613,7 +613,7 @@ module ietf-dots-signal-config {
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 11]
+Reddy, et al.          Expires September 22, 2017              [Page 11]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -669,7 +669,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 12]
+Reddy, et al.          Expires September 22, 2017              [Page 12]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -697,8 +697,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
    illustrated in JSON diagnostic notation).  The DOTS server can enable
    mitigation on behalf of the DOTS client by communicating the DOTS
    client's request to the mitigator and relaying any mitigator feedback
-   to the requesting DOTS client.  The PUT request and response are
-   marked as Non-confirmable messages.
+   to the requesting DOTS client.
 
 
 
@@ -725,7 +724,8 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 13]
+
+Reddy, et al.          Expires September 22, 2017              [Page 13]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -781,7 +781,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 14]
+Reddy, et al.          Expires September 22, 2017              [Page 14]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -837,7 +837,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 15]
+Reddy, et al.          Expires September 22, 2017              [Page 15]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -893,7 +893,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 16]
+Reddy, et al.          Expires September 22, 2017              [Page 16]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -949,7 +949,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 17]
+Reddy, et al.          Expires September 22, 2017              [Page 17]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -973,8 +973,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 5.3.2.  Withdraw a DOTS Signal
 
    A DELETE request is used to withdraw a DOTS signal from a DOTS server
-   (Figure 7).  The DELETE request and response are marked as Non-
-   confirmable messages.
+   (Figure 7).
 
      Header: DELETE (Code=0.04)
      Uri-Host: "host"
@@ -1005,7 +1004,8 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 18]
+
+Reddy, et al.          Expires September 22, 2017              [Page 18]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1026,10 +1026,9 @@ Internet-Draft             DOTS Signal Channel                March 2017
    signal from a DOTS server (Figure 8).  If the DOTS server does not
    find the policy-id parameter value conveyed in the GET request in its
    configuration data, then it responds with a 4.04 (Not Found) error
-   response code.  The GET request is marked as Non-confirmable message.
-   The 'c' (content) parameter and its permitted values defined in
-   [I-D.ietf-core-comi] can be used to retreive non-configuration data
-   or configuration data or both.
+   response code.  The 'c' (content) parameter and its permitted values
+   defined in [I-D.ietf-core-comi] can be used to retreive non-
+   configuration data or configuration data or both.
 
 
 
@@ -1061,7 +1060,8 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 19]
+
+Reddy, et al.          Expires September 22, 2017              [Page 19]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1117,7 +1117,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 20]
+Reddy, et al.          Expires September 22, 2017              [Page 20]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1173,7 +1173,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 21]
+Reddy, et al.          Expires September 22, 2017              [Page 21]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1220,8 +1220,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
    channel allows unsolicited message delivery, enabling asynchronous
    notifications between the agents.  A DOTS client that is no longer
    interested in receiving notifications from the DOTS server can simply
-   "forget" the observation.  The notification response is marked as
-   Non-confirmable message.  When the DOTS server then sends the next
+   "forget" the observation.  When the DOTS server then sends the next
    notification, the DOTS client will not recognize the token in the
    message and thus will return a Reset message.  This causes the DOTS
    server to remove the associated entry.
@@ -1229,7 +1228,8 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 22]
+
+Reddy, et al.          Expires September 22, 2017              [Page 22]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1285,7 +1285,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 23]
+Reddy, et al.          Expires September 22, 2017              [Page 23]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1297,8 +1297,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
    server.  An PUT request (Figure 11) is used to convey the mitigation
    efficacy update to the DOTS server.  The PUT request MUST include all
    the parameters used in the PUT request to convey the DOTS signal
-   (Section 5.3.1).  The PUT request and response are marked as Non-
-   Confirmable messages.
+   (Section 5.3.1).
 
 
 
@@ -1341,7 +1340,8 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 24]
+
+Reddy, et al.          Expires September 22, 2017              [Page 24]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1397,7 +1397,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 25]
+Reddy, et al.          Expires September 22, 2017              [Page 25]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1429,9 +1429,10 @@ Internet-Draft             DOTS Signal Channel                March 2017
    channel session behavior.  The DOTS signal channel can be used, for
    example, to configure the following:
 
-   a.  Heartbeat interval: DOTS agents regularly send heartbeats to each
-       other after mutual authentication in order to keep the DOTS
-       signal channel open.
+   a.  Heartbeat timeout: DOTS agents regularly send heartbeats (Ping/
+       Pong) to each other after mutual authentication in order to keep
+       the DOTS signal channel open, the time to wait for a Pong in
+       milliseconds.
    b.  Acceptable signal loss ratio: Maximum retransmissions,
        retransmission timeout value and other message transmission
        parameters for the DOTS signal channel.
@@ -1441,8 +1442,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
    A GET request is used to obtain acceptable configuration parameters
    on the DOTS server for DOTS signal channel session configuration.
    Figure 12 shows how to obtain acceptable configuration parameters for
-   the server.  The GET request and response are marked as Confirmable
-   messages.
+   the server.
 
 
 
@@ -1453,7 +1453,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 26]
+Reddy, et al.          Expires September 22, 2017              [Page 26]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1470,20 +1470,20 @@ Internet-Draft             DOTS Signal Channel                March 2017
    The DOTS server in the 2.05 (Content) response conveys the minimum
    and maximum attribute values acceptable by the DOTS server.
 
-   Content-Format: "application/cbor"
-    {
-      "heartbeat-interval": {"MinValue": integer, "MaxValue" : integer},
-      "max-retransmit": {"MinValue": integer, "MaxValue" : integer},
-      "ack-timeout": {"MinValue": integer, "MaxValue" : integer},
-      "ack-random-factor": {"MinValue": number, "MaxValue" : number}
-     }
+    Content-Format: "application/cbor"
+     {
+       "heartbeat-timeout": {"MinValue": integer, "MaxValue" : integer},
+       "max-retransmit": {"MinValue": integer, "MaxValue" : integer},
+       "ack-timeout": {"MinValue": integer, "MaxValue" : integer},
+       "ack-random-factor": {"MinValue": number, "MaxValue" : number}
+      }
 
                        Figure 13: GET response body
 
 5.4.2.  Convey DOTS Signal Channel Session Configuration
 
    A POST request is used to convey the configuration parameters for the
-   signaling channel (e.g., heartbeat interval, maximum retransmissions
+   signaling channel (e.g., heartbeat timeout, maximum retransmissions
    etc).  Message transmission parameters for CoAP are defined in
    Section 4.8 of [RFC7252].  If the DOTS agent wishes to change the
    default values of message transmission parameters then it should
@@ -1492,8 +1492,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
    parameters and default values for non-negotiated message transmission
    parameters.  The signaling channel session configuration is
    applicable to a single DOTS signal channel session between the DOTS
-   agents.  The POST request and response are marked as Confirmable
-   messages.
+   agents.
 
 
 
@@ -1509,7 +1508,8 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 27]
+
+Reddy, et al.          Expires September 22, 2017              [Page 27]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1524,7 +1524,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
      {
       "signal-config": {
         "policy-id": integer,
-        "heartbeat-interval": integer,
+        "heartbeat-timeout": integer,
         "max-retransmit": integer,
         "ack-timeout": integer,
         "ack-random-factor": number
@@ -1541,8 +1541,9 @@ Internet-Draft             DOTS Signal Channel                March 2017
       MUST be generated by the DOTS client.  This document does not make
       any assumption about how this identifier is generated.  This is a
       mandatory attribute.
-   heartbeat-interval:   Heartbeat interval to check the DOTS peer
-      health.  This is an optional attribute.
+   heartbeat-timeout:   Heartbeat timeout to wait for a response in
+      milliseconds to check the DOTS peer health.  This is an optional
+      attribute.
    max-retransmit:   Maximum number of retransmissions for a message
       (referred to as MAX_RETRANSMIT parameter in CoAP).  This is an
       optional attribute.
@@ -1553,7 +1554,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
       retransmissions (referred to as ACK_RANDOM_FACTOR parameter in
       CoAP).  This is an optional attribute.
 
-   In the POST request at least one of the attributes heartbeat-interval
+   In the POST request at least one of the attributes heartbeat-timeout
    or max-retransmit or ack-timeout or ack-random-factor MUST be
    present.  The POST request with higher numeric policy-id value over-
    rides the DOTS signal channel session configuration data installed by
@@ -1564,8 +1565,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-
-Reddy, et al.          Expires September 16, 2017              [Page 28]
+Reddy, et al.          Expires September 22, 2017              [Page 28]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1580,7 +1580,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
      {
        "signal-config": {
         "policy-id": 1234534333242,
-        "heartbeat-interval": 30,
+        "heartbeat-timeout": 30,
         "max-retransmit": 7,
         "ack-timeout": 5,
         "ack-random-factor": 1.5
@@ -1598,7 +1598,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
    response or if the request contains invalid or unknown parameters
    then 4.02 (Invalid query) will be returned in the response.  Response
    code 4.22 (Unprocessable Entity) will be returned in the response if
-   any of the heartbeat-interval, max-retransmit, target-protocol, ack-
+   any of the heartbeat-timeout, max-retransmit, target-protocol, ack-
    timeout and ack-random-factor attribute values is not acceptable to
    the DOTS server.  The DOTS server in the error response conveys the
    minumum and maximum attribute values acceptable by the DOTS server.
@@ -1607,7 +1607,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
      Content-Format: "application/cbor"
      {
-        "heartbeat-interval": {"MinValue": 15, "MaxValue" : 60},
+        "heartbeat-timeout": {"MinValue": 15, "MaxValue" : 60},
         "max-retransmit": {"MinValue": 3, "MaxValue" : 15},
         "ack-timeout": {"MinValue": 1, "MaxValue" : 30},
         "ack-random-factor": {"MinValue": 1.0, "MaxValue" : 4.0}
@@ -1621,7 +1621,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 29]
+Reddy, et al.          Expires September 22, 2017              [Page 29]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1629,8 +1629,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 5.4.3.  Delete DOTS Signal Channel Session Configuration
 
    A DELETE request is used to delete the installed DOTS signal channel
-   session configuration data (Figure 17).  The DELETE request and
-   response are marked as Confirmable messages.
+   session configuration data (Figure 17).
 
      Header: DELETE (Code=0.04)
      Uri-Host: "host"
@@ -1658,29 +1657,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
    A GET request is used to retrieve the installed DOTS signal channel
    session configuration data from a DOTS server.  Figure 18 shows how
-   to retrieve the DOTS signal channel session configuration data.  The
-   GET request and response are marked as Confirmable messages.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Reddy, et al.          Expires September 16, 2017              [Page 30]
-
-Internet-Draft             DOTS Signal Channel                March 2017
-
+   to retrieve the DOTS signal channel session configuration data.
 
      Header: GET (Code=0.01)
      Uri-Host: "host"
@@ -1696,6 +1673,14 @@ Internet-Draft             DOTS Signal Channel                March 2017
      }
 
                  Figure 18: GET to retrieve configuration
+
+
+
+
+Reddy, et al.          Expires September 22, 2017              [Page 30]
+
+Internet-Draft             DOTS Signal Channel                March 2017
+
 
 5.5.  Redirected Signaling
 
@@ -1730,17 +1715,28 @@ Internet-Draft             DOTS Signal Channel                March 2017
    addr:  IP address of alternate DOTS server.
    TTL:  Time to live represented as an integer number of seconds.
 
-
-
-
-Reddy, et al.          Expires September 16, 2017              [Page 31]
-
-Internet-Draft             DOTS Signal Channel                March 2017
-
-
    Figure 20 shows a 3.00 response example to convey the DOTS alternate
    server www.example-alt.com, its IP addresses 2002:db8:6401::1 and
    2002:db8:6401::2, and TTL values 3600 and 1800.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reddy, et al.          Expires September 22, 2017              [Page 31]
+
+Internet-Draft             DOTS Signal Channel                March 2017
+
 
    {
 
@@ -1789,7 +1785,11 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 32]
+
+
+
+
+Reddy, et al.          Expires September 22, 2017              [Page 32]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1817,7 +1817,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 | lifetime           | 13                     | 0                        |
 | attack-status      | 14                     | 0                        |
 | signal-config      | 15                     | 5                        |
-| heartbeat-interval | 16                     | 0                        |
+| heartbeat-timeout  | 16                     | 0                        |
 | max-retransmit     | 17                     | 0                        |
 | ack-timeout        | 18                     | 0                        |
 | ack-random-factor  | 19                     | 7                        |
@@ -1845,7 +1845,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 33]
+Reddy, et al.          Expires September 22, 2017              [Page 33]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1901,7 +1901,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 34]
+Reddy, et al.          Expires September 22, 2017              [Page 34]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1957,7 +1957,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 35]
+Reddy, et al.          Expires September 22, 2017              [Page 35]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2013,7 +2013,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 36]
+Reddy, et al.          Expires September 22, 2017              [Page 36]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2069,7 +2069,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 37]
+Reddy, et al.          Expires September 22, 2017              [Page 37]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2125,7 +2125,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 38]
+Reddy, et al.          Expires September 22, 2017              [Page 38]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2181,7 +2181,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 39]
+Reddy, et al.          Expires September 22, 2017              [Page 39]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2213,7 +2213,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
    o  Change Controller: IESG
    o  Specification Document(s): this document
 
-   o  Parameter Name: heartbeat-interval
+   o  Parameter Name: heartbeat-timeout
    o  CBOR Key Value: 16
    o  CBOR Major Type: 0
    o  Change Controller: IESG
@@ -2237,7 +2237,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 40]
+Reddy, et al.          Expires September 22, 2017              [Page 40]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2293,7 +2293,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 41]
+Reddy, et al.          Expires September 22, 2017              [Page 41]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2349,7 +2349,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 42]
+Reddy, et al.          Expires September 22, 2017              [Page 42]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2405,7 +2405,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 43]
+Reddy, et al.          Expires September 22, 2017              [Page 43]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2461,7 +2461,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 44]
+Reddy, et al.          Expires September 22, 2017              [Page 44]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2517,7 +2517,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 45]
+Reddy, et al.          Expires September 22, 2017              [Page 45]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2573,7 +2573,7 @@ Authors' Addresses
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 46]
+Reddy, et al.          Expires September 22, 2017              [Page 46]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2629,4 +2629,4 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 16, 2017              [Page 47]
+Reddy, et al.          Expires September 22, 2017              [Page 47]
