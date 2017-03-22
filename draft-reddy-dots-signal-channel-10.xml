@@ -1199,8 +1199,8 @@ a1                                      # map(1)
         for example, to configure the following:<list style="letters">
             <t>Heartbeat timeout: DOTS agents regularly send heartbeats
             (Ping/Pong) to each other after mutual authentication in order to
-            keep the DOTS signal channel open, the time to wait for a Pong in
-            milliseconds.</t>
+            keep the DOTS signal channel open, heartbeat timeout is the time
+            to wait for a Pong in milliseconds.</t>
 
             <t>Acceptable signal loss ratio: Maximum retransmissions,
             retransmission timeout value and other message transmission
@@ -1285,9 +1285,9 @@ a1                                      # map(1)
               does not make any assumption about how this identifier is
               generated. This is a mandatory attribute.</t>
 
-              <t hangText="heartbeat-timeout: ">Heartbeat timeout to wait for
-              a response in milliseconds to check the DOTS peer health. This
-              is an optional attribute.</t>
+              <t hangText="heartbeat-timeout: ">Heartbeat timeout is the time
+              to wait for a response in milliseconds to check the DOTS peer
+              health. This is an optional attribute.</t>
 
               <t hangText="max-retransmit: ">Maximum number of retransmissions
               for a message (referred to as MAX_RETRANSMIT parameter in CoAP).
