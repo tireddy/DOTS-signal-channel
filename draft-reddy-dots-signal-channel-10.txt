@@ -5,14 +5,14 @@
 DOTS                                                            T. Reddy
 Internet-Draft                                                     Cisco
 Intended status: Standards Track                            M. Boucadair
-Expires: September 22, 2017                                       Orange
+Expires: September 24, 2017                                       Orange
                                                                 P. Patil
                                                                    Cisco
                                                             A. Mortensen
                                                     Arbor Networks, Inc.
                                                                N. Teague
                                                           Verisign, Inc.
-                                                          March 21, 2017
+                                                          March 23, 2017
 
 
    Distributed Denial-of-Service Open Threat Signaling (DOTS) Signal
@@ -44,7 +44,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on September 22, 2017.
+   This Internet-Draft will expire on September 24, 2017.
 
 
 
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Reddy, et al.          Expires September 22, 2017               [Page 1]
+Reddy, et al.          Expires September 24, 2017               [Page 1]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -109,20 +109,22 @@ Table of Contents
 
 
 
-Reddy, et al.          Expires September 22, 2017               [Page 2]
+Reddy, et al.          Expires September 24, 2017               [Page 2]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
 
        10.1.1.  Registration Template  . . . . . . . . . . . . . . .  38
        10.1.2.  Initial Registry Contents  . . . . . . . . . . . . .  38
-   11. Security Considerations . . . . . . . . . . . . . . . . . . .  42
-   12. Contributors  . . . . . . . . . . . . . . . . . . . . . . . .  42
-   13. Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  43
-   14. References  . . . . . . . . . . . . . . . . . . . . . . . . .  43
-     14.1.  Normative References . . . . . . . . . . . . . . . . . .  43
-     14.2.  Informative References . . . . . . . . . . . . . . . . .  44
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  46
+   11. Implementation Status . . . . . . . . . . . . . . . . . . . .  42
+     11.1.  nttdots  . . . . . . . . . . . . . . . . . . . . . . . .  42
+   12. Security Considerations . . . . . . . . . . . . . . . . . . .  43
+   13. Contributors  . . . . . . . . . . . . . . . . . . . . . . . .  43
+   14. Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  44
+   15. References  . . . . . . . . . . . . . . . . . . . . . . . . .  44
+     15.1.  Normative References . . . . . . . . . . . . . . . . . .  44
+     15.2.  Informative References . . . . . . . . . . . . . . . . .  45
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  47
 
 1.  Introduction
 
@@ -163,9 +165,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-
-
-Reddy, et al.          Expires September 22, 2017               [Page 3]
+Reddy, et al.          Expires September 24, 2017               [Page 3]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -221,7 +221,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017               [Page 4]
+Reddy, et al.          Expires September 24, 2017               [Page 4]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -277,7 +277,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017               [Page 5]
+Reddy, et al.          Expires September 24, 2017               [Page 5]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -333,7 +333,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017               [Page 6]
+Reddy, et al.          Expires September 24, 2017               [Page 6]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -389,7 +389,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017               [Page 7]
+Reddy, et al.          Expires September 24, 2017               [Page 7]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -445,7 +445,7 @@ module ietf-dots-signal {
 
 
 
-Reddy, et al.          Expires September 22, 2017               [Page 8]
+Reddy, et al.          Expires September 24, 2017               [Page 8]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -501,7 +501,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017               [Page 9]
+Reddy, et al.          Expires September 24, 2017               [Page 9]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -557,7 +557,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 10]
+Reddy, et al.          Expires September 24, 2017              [Page 10]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -613,7 +613,7 @@ module ietf-dots-signal-config {
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 11]
+Reddy, et al.          Expires September 24, 2017              [Page 11]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -669,7 +669,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 12]
+Reddy, et al.          Expires September 24, 2017              [Page 12]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -725,7 +725,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 13]
+Reddy, et al.          Expires September 24, 2017              [Page 13]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -781,7 +781,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 14]
+Reddy, et al.          Expires September 24, 2017              [Page 14]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -837,7 +837,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 15]
+Reddy, et al.          Expires September 24, 2017              [Page 15]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -893,7 +893,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 16]
+Reddy, et al.          Expires September 24, 2017              [Page 16]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -949,7 +949,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 17]
+Reddy, et al.          Expires September 24, 2017              [Page 17]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1005,7 +1005,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 18]
+Reddy, et al.          Expires September 24, 2017              [Page 18]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1061,7 +1061,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 19]
+Reddy, et al.          Expires September 24, 2017              [Page 19]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1117,7 +1117,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 20]
+Reddy, et al.          Expires September 24, 2017              [Page 20]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1173,7 +1173,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 21]
+Reddy, et al.          Expires September 24, 2017              [Page 21]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1229,7 +1229,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 22]
+Reddy, et al.          Expires September 24, 2017              [Page 22]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1285,7 +1285,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 23]
+Reddy, et al.          Expires September 24, 2017              [Page 23]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1341,7 +1341,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 24]
+Reddy, et al.          Expires September 24, 2017              [Page 24]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1397,7 +1397,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 25]
+Reddy, et al.          Expires September 24, 2017              [Page 25]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1453,7 +1453,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 26]
+Reddy, et al.          Expires September 24, 2017              [Page 26]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1509,7 +1509,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 27]
+Reddy, et al.          Expires September 24, 2017              [Page 27]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1565,7 +1565,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 28]
+Reddy, et al.          Expires September 24, 2017              [Page 28]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1621,7 +1621,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 29]
+Reddy, et al.          Expires September 24, 2017              [Page 29]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1677,7 +1677,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 30]
+Reddy, et al.          Expires September 24, 2017              [Page 30]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1733,7 +1733,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 31]
+Reddy, et al.          Expires September 24, 2017              [Page 31]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1789,7 +1789,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 32]
+Reddy, et al.          Expires September 24, 2017              [Page 32]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1845,7 +1845,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 33]
+Reddy, et al.          Expires September 24, 2017              [Page 33]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1901,7 +1901,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 34]
+Reddy, et al.          Expires September 24, 2017              [Page 34]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -1957,7 +1957,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 35]
+Reddy, et al.          Expires September 24, 2017              [Page 35]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2013,7 +2013,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 36]
+Reddy, et al.          Expires September 24, 2017              [Page 36]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2069,7 +2069,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 37]
+Reddy, et al.          Expires September 24, 2017              [Page 37]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2125,7 +2125,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 38]
+Reddy, et al.          Expires September 24, 2017              [Page 38]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2181,7 +2181,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 39]
+Reddy, et al.          Expires September 24, 2017              [Page 39]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2237,7 +2237,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 40]
+Reddy, et al.          Expires September 24, 2017              [Page 40]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2293,12 +2293,68 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 41]
+Reddy, et al.          Expires September 24, 2017              [Page 41]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
 
-11.  Security Considerations
+11.  Implementation Status
+
+   [Note to RFC Editor: Please remove this section and reference to
+   [RFC6982] prior to publication.]
+
+   This section records the status of known implementations of the
+   protocol defined by this specification at the time of posting of this
+   Internet-Draft, and is based on a proposal described in [RFC6982].
+   The description of implementations in this section is intended to
+   assist the IETF in its decision processes in progressing drafts to
+   RFCs.  Please note that the listing of any individual implementation
+   here does not imply endorsement by the IETF.  Furthermore, no effort
+   has been spent to verify the information presented here that was
+   supplied by IETF contributors.  This is not intended as, and must not
+   be construed to be, a catalog of available implementations or their
+   features.  Readers are advised to note that other implementations may
+   exist.
+
+   According to [RFC6982], "this will allow reviewers and working groups
+   to assign due consideration to documents that have the benefit of
+   running code, which may serve as evidence of valuable experimentation
+   and feedback that have made the implemented protocols more mature.
+   It is up to the individual working groups to use this information as
+   they see fit".
+
+11.1.  nttdots
+
+   Organization:   NTT Communication is developing a DOTS client and
+      DOTS server software based on DOTS signal channel specified in
+      this draft.  It will be open-sourced.
+   Description:   Early implementation of DOTS protocol.  It is aimed to
+      implement a full DOTS protocol spec in accordance with maturing of
+      DOTS protocol itself.
+   Implementation:   To be open-sourced.
+   Level of maturity:   It is a early implementation of DOTS protocol.
+      Messaging between DOTS clients and DOTS servers has been tested.
+      Level of maturity will increase in accordance with maturing of
+      DOTS protocol itself.
+   Coverage:   Capability of DOTS client: sending DOTS messages to the
+      DOTS server in CoAP over DTLS as dots-signal.  Capability of DOTS
+      server: receiving dots-signal, validating received dots-signal,
+      starting mitigation by handing over the dots-signal to DDOS
+      mitigators.
+   Licensing:   It will be open-sourced with BSD 3-clause license.
+   Implementation experience:   It is implemented in go-lang.  Core
+      specification of signaling is mature to be implemented, however,
+      finding good libraries(like DTLS, CoAP) is rather difficult.
+   Contact:   Kaname Nishizuka <kaname@nttv6.jp>
+
+
+
+Reddy, et al.          Expires September 24, 2017              [Page 42]
+
+Internet-Draft             DOTS Signal Channel                March 2017
+
+
+12.  Security Considerations
 
    Authenticated encryption MUST be used for data confidentiality and
    message integrity.  (D)TLS based on client certificate MUST be used
@@ -2334,7 +2390,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
    from within the trusted domain if an entity has been corrupted.
    Adequate means to monitor trusted nodes should also be enabled.
 
-12.  Contributors
+13.  Contributors
 
    The following individuals have contributed to this document:
 
@@ -2349,20 +2405,20 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 42]
+Reddy, et al.          Expires September 24, 2017              [Page 43]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
 
-13.  Acknowledgements
+14.  Acknowledgements
 
    Thanks to Christian Jacquenet, Roland Dobbins, Andrew Mortensen,
    Roman D.  Danyliw, Michael Richardson, Ehud Doron, Kaname Nishizuka,
    Dave Dolson and Gilbert Clark for the discussion and comments.
 
-14.  References
+15.  References
 
-14.1.  Normative References
+15.1.  Normative References
 
    [I-D.ietf-core-coap-tcp-tls]
               Bormann, C., Lemay, S., Tschofenig, H., Hartke, K.,
@@ -2405,7 +2461,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 43]
+Reddy, et al.          Expires September 24, 2017              [Page 44]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2421,7 +2477,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
               DOI 10.17487/RFC7641, September 2015,
               <http://www.rfc-editor.org/info/rfc7641>.
 
-14.2.  Informative References
+15.2.  Informative References
 
    [I-D.ietf-core-comi]
               Stok, P., Bierman, A., Veillette, M., and A. Pelov, "CoAP
@@ -2461,7 +2517,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 44]
+Reddy, et al.          Expires September 24, 2017              [Page 45]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2517,7 +2573,7 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-Reddy, et al.          Expires September 22, 2017              [Page 45]
+Reddy, et al.          Expires September 24, 2017              [Page 46]
 
 Internet-Draft             DOTS Signal Channel                March 2017
 
@@ -2530,6 +2586,11 @@ Internet-Draft             DOTS Signal Channel                March 2017
               "Default Address Selection for Internet Protocol Version 6
               (IPv6)", RFC 6724, DOI 10.17487/RFC6724, September 2012,
               <http://www.rfc-editor.org/info/rfc6724>.
+
+   [RFC6982]  Sheffer, Y. and A. Farrel, "Improving Awareness of Running
+              Code: The Implementation Status Section", RFC 6982,
+              DOI 10.17487/RFC6982, July 2013,
+              <http://www.rfc-editor.org/info/rfc6982>.
 
    [RFC7049]  Bormann, C. and P. Hoffman, "Concise Binary Object
               Representation (CBOR)", RFC 7049, DOI 10.17487/RFC7049,
@@ -2561,21 +2622,24 @@ Authors' Addresses
    Email: tireddy@cisco.com
 
 
+
+
+
+
+
+
+
+Reddy, et al.          Expires September 24, 2017              [Page 47]
+
+Internet-Draft             DOTS Signal Channel                March 2017
+
+
    Mohamed Boucadair
    Orange
    Rennes  35000
    France
 
    Email: mohamed.boucadair@orange.com
-
-
-
-
-
-
-Reddy, et al.          Expires September 22, 2017              [Page 46]
-
-Internet-Draft             DOTS Signal Channel                March 2017
 
 
    Prashanth Patil
@@ -2621,12 +2685,4 @@ Internet-Draft             DOTS Signal Channel                March 2017
 
 
 
-
-
-
-
-
-
-
-
-Reddy, et al.          Expires September 22, 2017              [Page 47]
+Reddy, et al.          Expires September 24, 2017              [Page 48]

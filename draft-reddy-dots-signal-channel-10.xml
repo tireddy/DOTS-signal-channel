@@ -2029,6 +2029,67 @@ a1                                      # map(1)
       </section>
     </section>
 
+    <section title="Implementation Status">
+      <t>[Note to RFC Editor: Please remove this section and reference to
+      <xref target="RFC6982"></xref> prior to publication.]</t>
+
+      <t>This section records the status of known implementations of the
+      protocol defined by this specification at the time of posting of this
+      Internet-Draft, and is based on a proposal described in <xref
+      target="RFC6982"></xref>. The description of implementations in this
+      section is intended to assist the IETF in its decision processes in
+      progressing drafts to RFCs. Please note that the listing of any
+      individual implementation here does not imply endorsement by the IETF.
+      Furthermore, no effort has been spent to verify the information
+      presented here that was supplied by IETF contributors. This is not
+      intended as, and must not be construed to be, a catalog of available
+      implementations or their features. Readers are advised to note that
+      other implementations may exist.</t>
+
+      <t>According to <xref target="RFC6982"></xref>, "this will allow
+      reviewers and working groups to assign due consideration to documents
+      that have the benefit of running code, which may serve as evidence of
+      valuable experimentation and feedback that have made the implemented
+      protocols more mature. It is up to the individual working groups to use
+      this information as they see fit".</t>
+
+      <section title="nttdots">
+        <t><list style="hanging">
+            <t hangText="Organization: ">NTT Communication is developing a
+            DOTS client and DOTS server software based on DOTS signal channel
+            specified in this draft. It will be open-sourced.</t>
+
+            <t hangText="Description: ">Early implementation of DOTS protocol.
+            It is aimed to implement a full DOTS protocol spec in accordance
+            with maturing of DOTS protocol itself.</t>
+
+            <t hangText="Implementation: ">To be open-sourced.</t>
+
+            <t hangText="Level of maturity: ">It is a early implementation of
+            DOTS protocol. Messaging between DOTS clients and DOTS servers has
+            been tested. Level of maturity will increase in accordance with
+            maturing of DOTS protocol itself.</t>
+
+            <t hangText="Coverage: ">Capability of DOTS client: sending DOTS
+            messages to the DOTS server in CoAP over DTLS as dots-signal.
+            Capability of DOTS server: receiving dots-signal, validating
+            received dots-signal, starting mitigation by handing over the
+            dots-signal to DDOS mitigators.</t>
+
+            <t hangText="Licensing: ">It will be open-sourced with BSD
+            3-clause license.</t>
+
+            <t hangText="Implementation experience: ">It is implemented in
+            go-lang. Core specification of signaling is mature to be
+            implemented, however, finding good libraries(like DTLS, CoAP) is
+            rather difficult.</t>
+
+            <t hangText="Contact: ">Kaname Nishizuka
+            &lt;kaname@nttv6.jp&gt;</t>
+          </list></t>
+      </section>
+    </section>
+
     <section anchor="security" title="Security Considerations">
       <t>Authenticated encryption MUST be used for data confidentiality and
       message integrity. (D)TLS based on client certificate MUST be used for
@@ -2107,6 +2168,8 @@ a1                                      # map(1)
 
     <references title="Informative References">
       <?rfc include="reference.RFC.4732"?>
+
+      <?rfc include="reference.RFC.6982"?>
 
       <?rfc include='reference.RFC.4987'?>
 
